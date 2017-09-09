@@ -22,6 +22,7 @@
 		694AC8411F646DB0009163A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		694AC8441F646DB0009163A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		694AC8461F646DB0009163A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		694AC84C1F647BF2009163A1 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 				694AC8411F646DB0009163A1 /* Assets.xcassets */,
 				694AC8431F646DB0009163A1 /* LaunchScreen.storyboard */,
 				694AC8461F646DB0009163A1 /* Info.plist */,
+				694AC84C1F647BF2009163A1 /* FlowerClassifier.mlmodel */,
 			);
 			path = WhatFlower;
 			sourceTree = "<group>";
