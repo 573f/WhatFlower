@@ -12,6 +12,7 @@
 		694AC8401F646DB0009163A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694AC83E1F646DB0009163A1 /* Main.storyboard */; };
 		694AC8421F646DB0009163A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 694AC8411F646DB0009163A1 /* Assets.xcassets */; };
 		694AC8451F646DB0009163A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694AC8431F646DB0009163A1 /* LaunchScreen.storyboard */; };
+		694AC84F1F64D651009163A1 /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 694AC84E1F64D64B009163A1 /* FlowerClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +23,7 @@
 		694AC8411F646DB0009163A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		694AC8441F646DB0009163A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		694AC8461F646DB0009163A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		694AC84C1F647BF2009163A1 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
+		694AC84E1F64D64B009163A1 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +62,7 @@
 				694AC8411F646DB0009163A1 /* Assets.xcassets */,
 				694AC8431F646DB0009163A1 /* LaunchScreen.storyboard */,
 				694AC8461F646DB0009163A1 /* Info.plist */,
-				694AC84C1F647BF2009163A1 /* FlowerClassifier.mlmodel */,
+				694AC84E1F64D64B009163A1 /* FlowerClassifier.mlmodel */,
 			);
 			path = WhatFlower;
 			sourceTree = "<group>";
@@ -138,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				694AC84F1F64D651009163A1 /* FlowerClassifier.mlmodel in Sources */,
 				694AC83D1F646DB0009163A1 /* ViewController.swift in Sources */,
 				694AC83B1F646DB0009163A1 /* AppDelegate.swift in Sources */,
 			);
