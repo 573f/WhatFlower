@@ -9,12 +9,16 @@
 import UIKit
 import CoreML
 import Vision
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var flowerLabel: UILabel!
     
     let imagePicker = UIImagePickerController()
+    let wikipediaURl = "https://en.wikipedia.org/w/api.php"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +58,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let request = VNCoreMLRequest(model: model) { (request, error) in
             let classification = request.results?.first as? VNClassificationObservation
-            self.navigationItem.title = classification?.identifier.capitalized
+            if let flowerName = classification?.identifier.capitalized {
+                self.navigationItem.title = flowerName
+                self.fetchFlowerDescription(flowerName: flowerName)
+            }
         }
         
         let handler = VNImageRequestHandler(ciImage: image)
@@ -64,6 +71,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print(error)
         }
 
+    }
+    
+    func fetchFlowerDescription(flowerName: String) {
+        let parameters : [String:String] = [
+            "format" : "json",
+            "action" : "query",
+            "prop" : "extracts",
+            "exintro" : "",
+            "explaintext" : "",
+            "titles" : flowerName,
+            "indexpageids" : "",
+            "redirects" : "1",
+            ]
+        
+        Alamofire.request(wikipediaURl, method: .get, parameters: parameters).responseJSON {
+            response in
+            switch response.result {
+            case .success(let value):
+                let json: JSON = JSON(value)
+                print(json)
+            case .failure(let error):
+                self.flowerLabel.text = "Unable to get info from Wikipedia"
+                print(error)
+            }
+        }
     }
     
 }
